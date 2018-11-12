@@ -51,9 +51,7 @@ get_header(); ?>
 								if ( have_posts() ) : 
 									/* Start the Loop */ 
 									while ( have_posts() ) : the_post();
-
 										get_template_part( 'template-parts/content', 'page' );
-
 										// If comments are open or we have at least one comment, load up the comment template.
 										if ( comments_open() || get_comments_number() ) :
 											comments_template();
@@ -75,11 +73,9 @@ get_header(); ?>
 				  </div>
 				</div>
 				<!-- blog page end here --> 
-
 	        <?php endif; ?>
 	        </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_footer();
  

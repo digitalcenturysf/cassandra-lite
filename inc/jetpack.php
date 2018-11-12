@@ -6,7 +6,6 @@
  *
  * @package cassandra
  */
-
 /**
  * Jetpack setup function.
  *
@@ -20,12 +19,10 @@ function cassandra_jetpack_setup() {
 		'render'    => 'cassandra_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
-
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
 add_action( 'after_setup_theme', 'cassandra_jetpack_setup' );
-
 /**
  * Custom render function for Infinite Scroll.
  */

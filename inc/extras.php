@@ -6,7 +6,6 @@
  *
  * @package cassandra
  */
-
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -18,16 +17,13 @@ function cassandra_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'cassandra_body_classes' );
-
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */

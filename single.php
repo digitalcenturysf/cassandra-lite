@@ -6,39 +6,23 @@
  *
  * @package cassandra
  */
-
-$cassandra_opt = new CassandraFrameworkOpt();
-$cassandra_sidebar = $cassandra_opt->cassandra_sidebar_banner();
-$cassandra_demo = $cassandra_opt->cassandra_demo_setup();
+   
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 		<?php
 			if ( have_posts() ) : 
 				/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?> 
 			<!-- contact_map_area start here -->
-			<div class="blog_page_area <?php echo ($cassandra_demo==2) ? 'demo-2' : ''; ?>">
+			<div class="blog_page_area">
 			  <div class="container">
-			    <div class="row"> 
-				  <?php if($cassandra_demo !=2): ?> 
-				      <?php if( $cassandra_sidebar =='left' ): ?>
-					      <div class="side_bar_wrapper flft">
-					        <div class="side_bar"> 
-								<?php get_sidebar(); ?>
-					        </div>
-					      </div>
-				      <?php endif; ?>
-			      <?php endif; ?>
-			      <div class="blog_page <?php echo ( $cassandra_sidebar =='left' ) ? esc_attr('flrt') : ''; ?>">
-			        <div class="blog_details_area <?php echo (($cassandra_demo==2) && is_singular('post')) ? 'blg-2' : ''; ?>">
-						<?php if($cassandra_demo != 2): ?>
-				        	<?php if(has_post_thumbnail()): ?>
-						        <figure><?php the_post_thumbnail('cassandra-blog-single'); ?></figure>
-						    <?php endif; ?>
-						<?php endif; ?>
+			    <div class="row">  
+			      <div class="blog_page">
+			        <div class="blog_details_area"> 
+			        	<?php if(has_post_thumbnail()): ?>
+					        <figure><?php the_post_thumbnail('cassandra-blog-single'); ?></figure>
+					    <?php endif; ?> 
 			          <div class="blog_title clr">
 			            <div class="blog_title_lft">
 			              <p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cal-icon.png" alt="calender"></p>
@@ -54,19 +38,13 @@ get_header(); ?>
 							<?php } ?>
 			              </h6>
 			            </div>
-			          </div>
-						<?php if($cassandra_demo==2): ?>
-				        	<?php if(has_post_thumbnail()): ?>
-						        <figure><?php the_post_thumbnail('cassandra-blog-single'); ?></figure>
-						    <?php endif; ?>
-						<?php endif; ?>
-			          <div class="blog_para">
+			          </div>  
+			          <div class="blog_para mb-80">
 			            <?php the_content();
 					        wp_link_pages( array(
 					            'before' => '<div class="page-links">' . esc_html__( 'Pages:','cassandra-lite' ),
 					            'after'  => '</div>',
 					        ) ); 
-
 					        global $numpages;
 					        if ( is_singular() && $numpages > 1 ) {
 					              if ( is_singular( 'attachment' ) ) {
@@ -86,20 +64,10 @@ get_header(); ?>
 					                ) );
 					              }
 					        } ?>
-			          </div>
-			          <div class="blog_social_area">
-			            <div class="share_txt"><?php esc_html_e('Share This:','cassandra-lite'); ?></div>
-			            <div class="social_icon"> 
-			            	<a href="<?php echo esc_url('http://www.facebook.com/sharer.php?u='.get_the_permalink().'&amp;title='.get_the_title()); ?>"><i class="fa fa-facebook-f"></i></a> 
-			            	<a href="<?php echo esc_url('http://twitter.com/home/?status='.get_the_title().' - '.get_the_permalink()); ?>"><i class="fa fa-twitter"></i></a> 
-			            	<a href="<?php echo esc_url('https://plus.google.com/share?url='.get_the_permalink().'&amp;title='.get_the_title()); ?>"><i class="fa fa-google-plus"></i></a>
-			            	<a href="<?php echo esc_url('http://pinterest.com/pin/create/button/?url='.get_the_permalink().'&amp;title='.get_the_title()); ?>"><i class="fa fa-pinterest-p"></i></a> 
-			            	<a href="<?php echo esc_url('http://www.linkedin.com/shareArticle?mini=true&amp;title='.get_the_title().'&amp;url='.get_the_permalink()); ?>"><i class="fa fa-linkedin"></i></a>
-			            </div>
-			          </div>
+			          </div> 
 			          	<?php 
-						$exposed_author = get_the_author_meta('description');
-						if($exposed_author!=''): ?>
+						$cassandra_lite_author = get_the_author_meta('description');
+						if($cassandra_lite_author!=''): ?>
 						  <div class="blog_author_area clearfix">
 						    <figure><?php echo get_avatar( get_the_author_meta( 'ID' ), 170 ); ?> </figure>
 						    <div class="author_details">
@@ -115,16 +83,12 @@ get_header(); ?>
 							endif;
 						?>  
 			        </div>
-			      </div>
-					<?php if($cassandra_demo !=2): ?> 
-				      <?php if( $cassandra_sidebar !='left' ): ?>
-					      <div class="side_bar_wrapper">
-					        <div class="side_bar"> 
-								<?php get_sidebar(); ?>
-					        </div>
-					      </div>
-				      <?php endif; ?>
-			      	<?php endif; ?>
+			      </div> 
+			      <div class="side_bar_wrapper">
+			        <div class="side_bar"> 
+						<?php get_sidebar(); ?>
+			        </div>
+			      </div> 
 			    </div>
 			  </div>
 			</div>
@@ -132,5 +96,4 @@ get_header(); ?>
 		<?php endwhile; endif; ?> 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_footer();

@@ -1,5 +1,4 @@
 <?php 
-
 ?>
 <div class="header-top-inner">
   <div class="container">

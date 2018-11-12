@@ -1,7 +1,6 @@
 // AMD support (Thanks to @FagnerMartinsBrack)
 ;(function(factory) {
   'use strict';
-
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
   } else {
@@ -9,7 +8,6 @@
   }
 })(function($){
   'use strict';
-
   var instances = [],
       matchers  = [],
       defaultOptions  = {

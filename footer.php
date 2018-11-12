@@ -21,9 +21,7 @@ $cassandra_ftr_copy = $cassandra_opt->cassandra_copyright_text_here();
 	    </div>
 	  </div>
 	</div>
-
 </div><!-- #page --> 
 <?php wp_footer(); ?>
-
 </body>
 </html>

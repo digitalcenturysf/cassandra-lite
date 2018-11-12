@@ -1,9 +1,7 @@
 <?php
  
 require_once get_template_directory() . '/lib/theme-config/config-tgm/_class-tgm-plugin-activation.php';
-
 add_action( 'tgmpa_register', 'cassandra_register_required_plugins' );
-
 /**
  * Register the required plugins for this theme.
  *
@@ -27,7 +25,6 @@ function cassandra_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(
-
 		//This is an example of how to include a plugin bundled with a theme.  
 		array(
 			'name'      => esc_html__('Redux Framework','cassandra-lite'),  
@@ -40,7 +37,6 @@ function cassandra_register_required_plugins() {
 			'required'  => true,
 		)
 	); 
-
 	/*
 	 * Array of configuration settings. Amend each line as needed.
 	 *
@@ -60,6 +56,5 @@ function cassandra_register_required_plugins() {
 		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
 		'message'      => '',                      // Message to output right before the plugins table.
 	);
-
 	tgmpa( $plugins, $config );
 }

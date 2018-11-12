@@ -15,11 +15,8 @@ if ( file_exists(get_template_directory() . '/lib/theme-config/config-tgm/tgm-co
 if ( file_exists(get_template_directory() . '/lib/theme-config/config-redux/redux-config.php')){
 	require get_template_directory() . '/lib/theme-config/config-redux/redux-config.php';
 }
-
 //Adding custom meta box
 if ( file_exists(get_template_directory(). '/lib/theme-config/config-cmb2/metabox-config.php')) {
 	require get_template_directory() . '/lib/theme-config/config-cmb2/metabox-config.php';
 }
-
-
 

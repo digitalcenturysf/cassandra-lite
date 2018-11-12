@@ -1,27 +1,6 @@
 /**
  * Defalult Styles
  */
-
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
----------------------------------------------------------------- 
-# Elements
-# Forms
-# Navigation 
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
  
 /*--------------------------------------------------------------
 # Elements
@@ -29,29 +8,24 @@
 html {
 	box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
-
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
 	content: "";
 }
-
 blockquote,
 q {
 	quotes: "" "";
 }
-
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -59,38 +33,30 @@ hr {
 	margin-bottom: 1.5em;
 }
   
-
 ol {
 	list-style: decimal;
 }
-
 li > ul,
 li > ol {
 	margin-bottom: 0;
 }
-
 dt {
 	font-weight: bold;
 }
-
 dd {
 	margin: 0 1.5em 1.5em;
 }
-
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
-
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
-
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
-
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -108,14 +74,12 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6em 1em .4em;
 }
-
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
-
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -126,7 +90,6 @@ input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #aaa #bbb #bbb;
 }
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -148,11 +111,9 @@ textarea {
 	border-radius: 3px;
 	padding: 3px;
 }
-
 select {
 	border: 1px solid #ccc;
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -171,11 +132,9 @@ input[type="color"]:focus,
 textarea:focus {
 	color: #111;
 }
-
 textarea {
 	width: 100%;
 }
-
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/ 
@@ -188,24 +147,20 @@ textarea {
 	float: left;
 	width: 100%;
 }
-
 .main-navigation ul {
 	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-
 .main-navigation li {
 	float: left;
 	position: relative;
 }
-
 .main-navigation a {
 	display: block;
 	text-decoration: none;
 }
-
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
@@ -214,54 +169,42 @@ textarea {
 	left: -999em;
 	z-index: 99999;
 }
-
 .main-navigation ul ul ul {
 	left: -999em;
 	top: 0;
 }
-
 .main-navigation ul ul a {
 	width: 200px;
 }
-
 .main-navigation ul ul li {
-
 }
-
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
 }
-
 .main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
 }
-
 .main-navigation ul ul a:hover,
 .main-navigation ul ul a.focus {
 }
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
 }
-
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	left: 100%;
 }
-
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
 }
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
 }
-
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -270,21 +213,18 @@ textarea {
 		display: block;
 	}
 }
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
-
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -292,7 +232,6 @@ textarea {
 	text-align: right;
 	width: 50%;
 }
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -305,7 +244,6 @@ textarea {
 	overflow: hidden;
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
-
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
@@ -325,12 +263,10 @@ textarea {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
-
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
-
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -339,20 +275,17 @@ textarea {
 	float: left;
 	margin-right: 1.5em;
 }
-
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
-
 .aligncenter {
 	clear: both;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -372,7 +305,6 @@ textarea {
 	display: table;
 	table-layout: fixed;
 }
-
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -381,19 +313,18 @@ textarea {
 .site-footer:after {
 	clear: both;
 }
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
 }
-
 /* Make sure select elements fit in widgets. */
 .widget select {
-	max-width: 100%;
+	width: 100%;
+    height: 45px;
+    padding: 5px;
 }
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -403,43 +334,35 @@ textarea {
 .sticky {
 	display: block;
 }
-
 .hentry {
 	margin: 0 0 1.5em;
 }
-
 .byline,
 .updated:not(.published) {
 	display: none;
 }
-
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
-
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comment-content a {
 	word-wrap: break-word;
 }
-
 .bypostauthor {
 	display: block;
 }
-
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -448,12 +371,10 @@ textarea {
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
 }
-
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
 }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -465,14 +386,12 @@ textarea {
 	margin-top: 0;
 	padding: 0;
 }
-
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
 	max-width: 100%;
 }
-
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -480,67 +399,53 @@ object {
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
-
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
-
 .wp-caption-text {
 	text-align: center;
 }
-
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
 	margin-bottom: 1.5em;
 }
-
 .gallery-item {
 	display: inline-block;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
 }
-
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
-
 .gallery-columns-3 .gallery-item {
 	max-width: 33.33%;
 }
-
 .gallery-columns-4 .gallery-item {
 	max-width: 25%;
 }
-
 .gallery-columns-5 .gallery-item {
 	max-width: 20%;
 }
-
 .gallery-columns-6 .gallery-item {
 	max-width: 16.66%;
 }
-
 .gallery-columns-7 .gallery-item {
 	max-width: 14.28%;
 }
-
 .gallery-columns-8 .gallery-item {
 	max-width: 12.5%;
 }
-
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
-
 .gallery-caption {
 	display: block;
 }

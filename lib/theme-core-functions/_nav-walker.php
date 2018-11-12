@@ -1,13 +1,12 @@
 <?php
  
-if ( ! class_exists( 'Media_Navwalker' ) ) {
+if ( ! class_exists( 'Cassandra_lite_Walker' ) ) {
 	/**
-	 * Media_Navwalker class.
+	 * Cassandra_lite_Walker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class Media_Navwalker extends Walker_Nav_Menu {
-
+	class Cassandra_lite_Walker extends Walker_Nav_Menu {
 		/**
 		 * Start Level.
 		 *
@@ -24,7 +23,6 @@ if ( ! class_exists( 'Media_Navwalker' ) ) {
 			$indent = str_repeat( "\t", $depth );
 			$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\" >\n";
 		}
-
 		/**
 		 * Start El.
 		 *
@@ -41,7 +39,6 @@ if ( ! class_exists( 'Media_Navwalker' ) ) {
 		 */
 		public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-
 			/**
 			* Dividers, Headers or Disabled
 			* =============================
@@ -71,14 +68,7 @@ if ( ! class_exists( 'Media_Navwalker' ) ) {
 				$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 				$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 				$output .= $indent . '<li' . $id . $value . $class_names . '>';
-				$atts = array();
-
-				if ( empty( $item->attr_title ) ) {
-		  			$atts['title']  = ! empty( $item->title )   ? strip_tags( $item->title ) : '';
-				} else {
-		  			$atts['title'] = $item->attr_title;
-				}
-
+				$atts = array(); 
 				$atts['target'] = ! empty( $item->target )	? $item->target	: '';
 				$atts['rel']    = ! empty( $item->xfn )		? $item->xfn	: '';
 				// If item has_children add atts to a.
@@ -99,7 +89,6 @@ if ( ! class_exists( 'Media_Navwalker' ) ) {
 					}
 				}
 				$item_output = $args->before;
-
 				/*
 				 * Glyphicons/Font-Awesome
 				 * ===========
@@ -123,7 +112,6 @@ if ( ! class_exists( 'Media_Navwalker' ) ) {
 				$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 			}
 		}
-
 		/**
 		 * Traverse elements to create list from elements.
 		 *

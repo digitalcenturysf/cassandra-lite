@@ -4,7 +4,6 @@
  *
  * @package cassandra
  */
-
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
@@ -16,7 +15,6 @@ function cassandra_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'cassandra_customize_register' );
-
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */

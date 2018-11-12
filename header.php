@@ -8,25 +8,20 @@
  *
  * @package cassandra
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
 <?php 
 $cassandra_opt = new CassandraFrameworkOpt();
 $cassandra_logo = $cassandra_opt->cassandra_logo();   
 wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content','cassandra-lite' ); ?></a>
-
 	<header> 
 	  <nav class="navbar navbar-inverse navbar-fixed-top">
 	    <div class="container">   
@@ -48,7 +43,6 @@ wp_head(); ?>
 	    </div> 
 	  </nav>
 	</header>
-
 	<?php 
 		if(is_page()){
 			get_template_part('header/banner-full');
@@ -56,5 +50,4 @@ wp_head(); ?>
 			get_template_part('header/banner');
 		}
 	?>
-
 	<div id="content" class="site-content">

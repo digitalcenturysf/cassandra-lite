@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for displaying posts
  *
@@ -9,7 +8,6 @@
  */
  
 ?>
-
 <div id="post-<?php the_ID(); ?>" <?php post_class("blog-section1 blog-section2 "); ?> >
 	<?php 
 	$cassandra_img_chk = 'noimgm0';
@@ -36,4 +34,3 @@
 	<h5><?php cassandra_short_text_remove_shortcode(); ?></h5>
 	<h6><?php esc_html_e('by','cassandra-lite'); ?> <span><a href="#"><?php the_author(); ?></a></span>&nbsp; &nbsp;    /&nbsp; &nbsp;    <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . esc_html__(' ago','cassandra-lite'); ?></h6>
 </div> 
-
