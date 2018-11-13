@@ -36,7 +36,7 @@ get_header(); ?>
 			          </div>
 			        </div>
 			        <div class="pagination_area">
-			           <?php cassandra_pagination(); ?> 
+			           <?php cassandra_lite_pagination(); ?> 
 			        </div>
 			      </div>  
 			      <div class="side_bar_wrapper">

@@ -7,15 +7,15 @@
  * @package cassandra
  */
 if(is_page()){ 
-	if(get_post_meta(get_the_ID(),'_cassandra_page_title',true) !=null){
-		$cassandra_pg_title = get_post_meta(get_the_ID(),'_cassandra_page_title',true);
+	if(get_post_meta(get_the_ID(),'_cassandra_lite_page_title',true) !=null){
+		$cassandra_lite_pg_title = get_post_meta(get_the_ID(),'_cassandra_lite_page_title',true);
 	}else{
-		$cassandra_pg_title = 'yes';
+		$cassandra_lite_pg_title = 'yes';
 	}
 } 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if($cassandra_pg_title =='yes'): ?>
+	<?php if($cassandra_lite_pg_title =='yes'): ?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->

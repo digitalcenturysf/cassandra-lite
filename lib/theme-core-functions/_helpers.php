@@ -5,9 +5,9 @@
  * Cassandra Pagination
  =====================================================================*/
  
-if ( ! function_exists( 'cassandra_pagination' ) ){ 
+if ( ! function_exists( 'cassandra_lite_pagination' ) ){ 
 
-	function cassandra_pagination() {
+	function cassandra_lite_pagination() {
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 			return;
@@ -47,7 +47,7 @@ if ( ! function_exists( 'cassandra_pagination' ) ){
  * Cassandra Comment List 
 =====================================================================*/
  
-function cassandra_comments_list($comment, $args, $depth) {
+function cassandra_lite_comments_list($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment; ?>
     <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
 	  <div class="blog_author_area clearfix">
@@ -69,8 +69,8 @@ function cassandra_comments_list($comment, $args, $depth) {
  * Comment box title change
 =====================================================================*/
  
-add_filter( 'comment_form_defaults', 'cassandra_comment_form_allowed_tags' );
-function cassandra_comment_form_allowed_tags( $defaults ) {
+add_filter( 'comment_form_defaults', 'cassandra_lite_comment_form_allowed_tags' );
+function cassandra_lite_comment_form_allowed_tags( $defaults ) {
 
 	$defaults['title_reply'] = wp_kses( __('<span>Get In</span> Touch  with Us','cassandra-lite'  ), array('span'=> array('class' => array())) );
 	$defaults['title_reply_before'] =  '<div class="site-section-area"><h2>';
@@ -87,10 +87,10 @@ function cassandra_comment_form_allowed_tags( $defaults ) {
  * Comment form field order
 =====================================================================*/
  
-add_action( 'comment_form_after_fields', 'cassandra_add_textarea' );
-add_action( 'comment_form_logged_in_after', 'cassandra_add_textarea' );
+add_action( 'comment_form_after_fields', 'cassandra_lite_add_textarea' );
+add_action( 'comment_form_logged_in_after', 'cassandra_lite_add_textarea' );
 
-function cassandra_add_textarea()
+function cassandra_lite_add_textarea()
 {
     echo '<li class="msg"><textarea id="comment" name="comment" cols="45" rows="6" placeholder="Your Comment" maxlength="65525"  required="required"></textarea></li>';
 }
@@ -100,7 +100,7 @@ function cassandra_add_textarea()
  * remove comment fields
 =====================================================================*/
  
-function cassandra_remove_comment_fields($fields) {
+function cassandra_lite_remove_comment_fields($fields) {
 	$commenter = wp_get_current_commenter();
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? " aria-required='true'" : '' );
@@ -115,7 +115,7 @@ function cassandra_remove_comment_fields($fields) {
     '" size="30" /></li>';
     return $fields;
 }
-add_filter('comment_form_default_fields','cassandra_remove_comment_fields');
+add_filter('comment_form_default_fields','cassandra_lite_remove_comment_fields');
 
 
 /**=====================================================================
@@ -129,7 +129,7 @@ function media_main_menu(){
 		'container'         => false,
 		'menu_id'        	=> 'media_menu',
 		'menu_class'        => 'nav navbar-nav',
-		'walker'       		=> new Cassandra_lite_Walker(),
+		'walker'       		=> new cassandra_lite_lite_Walker(),
 		'fallback_cb'       => 'media_default_menu'
 	));
 }
@@ -154,28 +154,28 @@ endif;
 /**=====================================================================
  * BreadCrumb
 =====================================================================*/
-function cassandra_breadcrumb(){
+function cassandra_lite_breadcrumb(){
 	global $post,$cassandra;
 	if(isset($cassandra['blog-title2'])){
-		$cassandra_blog_title=  $cassandra['blog-title2'];
+		$cassandra_lite_blog_title=  $cassandra['blog-title2'];
 	}else{
-		$cassandra_blog_title=  esc_html__('Blog','cassandra-lite');
+		$cassandra_lite_blog_title=  esc_html__('Blog','cassandra-lite');
 	}
 
 	if(is_front_page() && is_home()){
-		echo esc_html($cassandra_blog_title);
+		echo esc_html($cassandra_lite_blog_title);
 
 	}elseif(is_home() || is_page()){
 		if(is_page()){
-		    if(''!=get_post_meta($post->ID,'_cassandra_page_banner_ttl',true)){
-		        $cassandra_ptitle = get_post_meta($post->ID,'_cassandra_page_banner_ttl',true);
+		    if(''!=get_post_meta($post->ID,'_cassandra_lite_page_banner_ttl',true)){
+		        $cassandra_lite_ptitle = get_post_meta($post->ID,'_cassandra_lite_page_banner_ttl',true);
 			}else{
-				$cassandra_ptitle =  get_the_title();
+				$cassandra_lite_ptitle =  get_the_title();
 			}
 		}else{
-			$cassandra_ptitle =  $cassandra_blog_title;
+			$cassandra_lite_ptitle =  $cassandra_lite_blog_title;
 		}
-	  printf( esc_html__('%s','cassandra-lite'),$cassandra_ptitle);
+	  printf( esc_html__('%s','cassandra-lite'),$cassandra_lite_ptitle);
 	}elseif(is_single()){
 		if(isset($cassandra['single-title2']) && (''!=$cassandra['single-title2'])){
 			printf(  $cassandra['single-title2'] );
@@ -215,28 +215,28 @@ function cassandra_breadcrumb(){
 /**=====================================================================
  * BreadCrumb sub (Top) Title 1
 =====================================================================*/
-function cassandra_breadcrumb_1(){
+function cassandra_lite_breadcrumb_1(){
 	global $post,$cassandra;
 	if(isset($cassandra['blog-title'])){
-		$cassandra_blog_title=  $cassandra['blog-title'];
+		$cassandra_lite_blog_title=  $cassandra['blog-title'];
 	}else{
-		$cassandra_blog_title=  esc_html__('New Collection','cassandra-lite');
+		$cassandra_lite_blog_title=  esc_html__('New Collection','cassandra-lite');
 	}
 
 	if(is_front_page() && is_home()){
-		echo esc_html($cassandra_blog_title);
+		echo esc_html($cassandra_lite_blog_title);
 
 	}elseif(is_home() || is_page()){
 		if(is_page()){
-		    if(''!=get_post_meta($post->ID,'_cassandra_page_banner_sbttl',true)){
-		        $cassandra_ptitle = get_post_meta($post->ID,'_cassandra_page_banner_sbttl',true);
+		    if(''!=get_post_meta($post->ID,'_cassandra_lite_page_banner_sbttl',true)){
+		        $cassandra_lite_ptitle = get_post_meta($post->ID,'_cassandra_lite_page_banner_sbttl',true);
 			}else{
-				$cassandra_ptitle =  get_the_title();
+				$cassandra_lite_ptitle =  get_the_title();
 			}
 		}else{
-			$cassandra_ptitle =  $cassandra_blog_title;
+			$cassandra_lite_ptitle =  $cassandra_lite_blog_title;
 		}
-	  printf( esc_html__('%s','cassandra-lite'),$cassandra_ptitle);
+	  printf( esc_html__('%s','cassandra-lite'),$cassandra_lite_ptitle);
 	}elseif(is_single()){
 		if(isset($cassandra['single-title']) && (''!=$cassandra['single-title'])){
 			printf(  $cassandra['single-title'] );
@@ -275,7 +275,7 @@ function cassandra_breadcrumb_1(){
 }
   
 // woocommerce min cart
-function cassandra_woocommere_min_cart(){
+function cassandra_lite_woocommere_min_cart(){
 	global $woocommerce;
 ?>
     <div class="cart-area"><a href="<?php if ( class_exists( 'WooCommerce' ) ) { echo wc_get_cart_url(); }else{ echo '#'; } ?>">
@@ -291,8 +291,8 @@ function cassandra_woocommere_min_cart(){
 }
  
 // product item count with ajax
-add_filter( 'woocommerce_add_to_cart_fragments', 'cassandra_woocommerce_header_add_to_cart_fragment' );
-function cassandra_woocommerce_header_add_to_cart_fragment( $fragments ) {
+add_filter( 'woocommerce_add_to_cart_fragments', 'cassandra_lite_woocommerce_header_add_to_cart_fragment' );
+function cassandra_lite_woocommerce_header_add_to_cart_fragment( $fragments ) {
 		global $woocommerce;
 	ob_start();
 	?>
@@ -310,7 +310,7 @@ function cassandra_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	return $fragments;
 }
 // remove vc shortcode
-function cassandra_short_text_remove_shortcode($start=0,$end=50,$dot=''){
+function cassandra_lite_short_text_remove_shortcode($start=0,$end=50,$dot=''){
 	global $post;
 	/* Get Post congtent */
 	$content = $post->post_content;
@@ -328,21 +328,49 @@ function cassandra_short_text_remove_shortcode($start=0,$end=50,$dot=''){
  * Cassandra Slider Category Query
 =====================================================================*/
  
-function cassandra_slider_terms(){
-	$trade_all_terms = array();
-	$trade_term_name = array();
-	$trade_term_slug = array();
-	$trade_terms = get_terms( 'slider_cat' );
-	if ( ! empty( $trade_terms ) && ! is_wp_error( $trade_terms ) ){
-	    foreach ( $trade_terms as $trade_term ) {
-	        $trade_term_name[] =  $trade_term->name;
-	        $trade_term_slug[] =  $trade_term->slug;
+function cassandra_lite_slider_terms(){
+	$cassandra_lite_all_terms = array();
+	$cassandra_lite_term_name = array();
+	$cassandra_lite_term_slug = array();
+	$cassandra_lite_terms = get_terms( 'slider_cat' );
+	if ( ! empty( $cassandra_lite_terms ) && ! is_wp_error( $cassandra_lite_terms ) ){
+	    foreach ( $cassandra_lite_terms as $cassandra_lite_term ) {
+	        $cassandra_lite_term_name[] =  $cassandra_lite_term->name;
+	        $cassandra_lite_term_slug[] =  $cassandra_lite_term->slug;
 	    }
 	}
-	$trade_all_terms =  array_combine($trade_term_slug,$trade_term_name);
-	if(empty($trade_all_terms)){
-		return $trade_all_terms = array( 'none' => 'None.');
+	$cassandra_lite_all_terms =  array_combine($cassandra_lite_term_slug,$cassandra_lite_term_name);
+	if(empty($cassandra_lite_all_terms)){
+		return $cassandra_lite_all_terms = array( 'none' => 'None.');
 	}else{
-		return $trade_all_terms;
+		return $cassandra_lite_all_terms;
 	}
 }
+
+// main header logo area
+function cassandra_lite_headerLogo(){
+    global $viktor_lite;
+	$logo = get_theme_mod( 'custom_logo' );
+	$image = wp_get_attachment_image_src( $logo , 'full' ); 
+	//$logo = get_theme_mod( 'v_logo_img' );
+	if( !empty($logo) ){
+	?>
+	    <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url($image[0]); ?>" alt="<?php esc_attr_e('site logo','cassandra-lite'); ?>"></a>
+	<?php }else{ ?>
+	<a class="navbar-brand text-logo" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a>
+	<?php }
+} 
+
+// copyright test options
+function cassandra_lite_copyrightText(){ 
+    $copy_text = get_theme_mod( 'v_copyright_text' );
+	if(!empty($copy_text)){
+	?>
+		<p><?php echo esc_html($copy_text); ?></p>
+	<?php
+	}else{
+	?>
+		<p><?php esc_html_e('Cassandra - Copyrights','cassandra-lite'); ?> &copy; <a href="<?php echo esc_url('http://digitalcenturysf.com/'); ?>" target="_blank"><?php esc_html_e('DigitalCenturySF.','cassandra-lite'); ?></a></p>
+	<?php
+	}
+} 

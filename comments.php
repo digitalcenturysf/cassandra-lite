@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ul',
-					'callback' => 'cassandra_comments_list' 
+					'callback' => 'cassandra_lite_comments_list' 
 				) );
 			?>
         </ul>

@@ -8,26 +8,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**===============================================================================
  * Enqueue Theme Assets (Scripts & Styles)
  =================================================================================*/
-if ( file_exists( CASSANDRA_DIR . '/lib/theme-core-functions/_enqueue-assets.php')) {
-    require CASSANDRA_DIR . '/lib/theme-core-functions/_enqueue-assets.php';
+if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_enqueue-assets.php')) {
+    require cassandra_lite_DIR . '/lib/theme-core-functions/_enqueue-assets.php';
 }
 /**===============================================================================
  * Register Functions
  =================================================================================*/
-if ( file_exists( CASSANDRA_DIR . '/lib/theme-core-functions/_register.php')) { 
-    require CASSANDRA_DIR . '/lib/theme-core-functions/_register.php';
+if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_register.php')) { 
+    require cassandra_lite_DIR . '/lib/theme-core-functions/_register.php';
 }
 /**===============================================================================
  * Helpers Functions
  =================================================================================*/
-if ( file_exists( CASSANDRA_DIR . '/lib/theme-core-functions/_helpers.php')) { 
-    require CASSANDRA_DIR . '/lib/theme-core-functions/_helpers.php';
+if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_helpers.php')) { 
+    require cassandra_lite_DIR . '/lib/theme-core-functions/_helpers.php';
 }
 /**===============================================================================
  * Helpers Functions
  =================================================================================*/
-if ( file_exists( CASSANDRA_DIR . '/lib/theme-core-functions/_nav-walker.php')) { 
-    require CASSANDRA_DIR . '/lib/theme-core-functions/_nav-walker.php';
+if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_nav-walker.php')) { 
+    require cassandra_lite_DIR . '/lib/theme-core-functions/_nav-walker.php';
 }
 /**===============================================================================
  * Sets up theme defaults and registers support for various WordPress features.
@@ -36,8 +36,8 @@ if ( file_exists( CASSANDRA_DIR . '/lib/theme-core-functions/_nav-walker.php')) 
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  ===============================================================================*/
-if ( ! function_exists( 'cassandra_setup' ) ) :
-function cassandra_setup() {
+if ( ! function_exists( 'cassandra_lite_setup' ) ) :
+function cassandra_lite_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -79,21 +79,31 @@ function cassandra_setup() {
 		'gallery',
 		'caption',
 	) );
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'cassandra_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	/*
+	 * Custom Logo
+	 */ 
+  	add_theme_support( 'custom-logo', array(
+	   'height'      => 39,
+	   'width'       => 139,
+	   'flex-width'  => true,
+       'flex-height' => true,'header-text' => array( 'logo-area' ),
+	) );
+
+	add_theme_support( 'custom-header', array(
+		'flex-width'    => true, 
+		'flex-height'    => true, 
+		'default-image' => get_template_directory_uri() . '/assets/images/banner.jpg',
+	) );
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'assets/css/editor-style.css', cassandra_fonts_url() ) );
+	add_editor_style( array( 'assets/css/editor-style.css', cassandra_lite_fonts_url() ) );
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'cassandra_setup' );
+add_action( 'after_setup_theme', 'cassandra_lite_setup' );
 
 /**===============================================================================
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -102,19 +112,19 @@ add_action( 'after_setup_theme', 'cassandra_setup' );
  *
  * @global int $content_width
  ===============================================================================*/
-function cassandra_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'cassandra_content_width', 1170 );
+function cassandra_lite_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'cassandra_lite_content_width', 1170 );
 }
-add_action( 'after_setup_theme', 'cassandra_content_width', 0 );
+add_action( 'after_setup_theme', 'cassandra_lite_content_width', 0 );
 /**===============================================================================
  * Remove the Open Sans From Frontend & Backend
  =================================================================================*/ 
-if (!function_exists('cassandra_remove_wp_open_sans')) :
-    function cassandra_remove_wp_open_sans() {
+if (!function_exists('cassandra_lite_remove_wp_open_sans')) :
+    function cassandra_lite_remove_wp_open_sans() {
         wp_deregister_style( 'open-sans' );
         wp_register_style( 'open-sans', false );
     }
-    add_action('wp_enqueue_scripts', 'cassandra_remove_wp_open_sans');
+    add_action('wp_enqueue_scripts', 'cassandra_lite_remove_wp_open_sans');
     // Uncomment below line to remove from the admin
-    // add_action('admin_enqueue_scripts', 'cassandra_remove_wp_open_sans');
+    // add_action('admin_enqueue_scripts', 'cassandra_lite_remove_wp_open_sans');
 endif;

@@ -4,9 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cassandra_widgets_init() {
-$cassandra_opt = new CassandraFrameworkOpt(); 
-$cassandra_demo = $cassandra_opt->cassandra_demo_setup();
+function cassandra_lite_widgets_init() { 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar','cassandra-lite' ),
 		'id'            => 'sidebar-1',
@@ -15,18 +13,7 @@ $cassandra_demo = $cassandra_opt->cassandra_demo_setup();
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="site-section-area"><h2>',
 		'after_title'   => '</h2></div>',
-	) );
-	if($cassandra_demo==2){
-		register_sidebar( array(
-			'name'          => esc_html__( 'Shop Sidebar','cassandra-lite' ),
-			'id'            => 'sidebar-s',
-			'description'   => esc_html__( 'Add widgets here.','cassandra-lite' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s popular_area">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<div class="site-section-area"><h2>',
-			'after_title'   => '</h2></div>',
-		) );
-	}
+	) ); 
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Widget','cassandra-lite' ),
 		'id'            => 'sidebar-f',
@@ -37,12 +24,12 @@ $cassandra_demo = $cassandra_opt->cassandra_demo_setup();
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'cassandra_widgets_init' );
+add_action( 'widgets_init', 'cassandra_lite_widgets_init' );
 
 /**
  *	Register Fonts
  */
-function cassandra_fonts_url() {
+function cassandra_lite_fonts_url() {
     $media_font = '';
 	$open_sans = _x( 'on', 'Open Sans font: on or off','cassandra-lite' );
 	$Montserrat = _x( 'on', 'Montserrat font: on or off','cassandra-lite' );

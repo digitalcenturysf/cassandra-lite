@@ -12,18 +12,18 @@
  * @package cassandra
  */
 if(is_page()){
-	$cassandra_pg_sidbr = get_post_meta(get_the_ID(),'_cassandra_post_sidebar',true);
+	$cassandra_lite_pg_sidbr = get_post_meta(get_the_ID(),'_cassandra_lite_post_sidebar',true);
 }else{
-	$cassandra_pg_sidbr = '';
+	$cassandra_lite_pg_sidbr = '';
 }
-$cassandra_opt = new CassandraFrameworkOpt();
-$cassandra_demo = $cassandra_opt->cassandra_demo_setup();
+$cassandra_lite_opt = new CassandraFrameworkOpt();
+$cassandra_lite_demo = $cassandra_lite_opt->cassandra_lite_demo_setup();
 get_header(); ?>
  
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main"> 
-			<div class="blog_details_area fwd <?php echo ($cassandra_demo==2) ? 'demo-2' : ''; ?>"> 
-			<?php if($cassandra_pg_sidbr =='fulls'): ?>
+			<div class="blog_details_area fwd <?php echo ($cassandra_lite_demo==2) ? 'demo-2' : ''; ?>"> 
+			<?php if($cassandra_lite_pg_sidbr =='fulls'): ?>
 	            <?php
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content', 'page' );
@@ -38,14 +38,14 @@ get_header(); ?>
 					<div class="blog_page_area page_area">
 					  <div class="container">
 					    <div class="row">
-				      	<?php if($cassandra_pg_sidbr=='left'): ?> 
+				      	<?php if($cassandra_lite_pg_sidbr=='left'): ?> 
 					      <div class="side_bar_wrapper flft">
 					        <div class="side_bar"> 
 								<?php get_sidebar(); ?>
 					        </div>
 					      </div>
 				      	<?php endif; ?>
-						<div class="blog_page <?php echo ($cassandra_pg_sidbr=='left') ? esc_attr('flrt') : ''; ?> <?php echo ($cassandra_pg_sidbr=='fullw') ? esc_attr('fwd') : ''; ?>">
+						<div class="blog_page <?php echo ($cassandra_lite_pg_sidbr=='left') ? esc_attr('flrt') : ''; ?> <?php echo ($cassandra_lite_pg_sidbr=='fullw') ? esc_attr('fwd') : ''; ?>">
 			        		<div class="blog_details_area">  
 								<?php
 								if ( have_posts() ) : 
@@ -62,7 +62,7 @@ get_header(); ?>
 								endif; ?>  
 							</div> 
 						</div> 
-				      	<?php if( ($cassandra_pg_sidbr!='left') && ($cassandra_pg_sidbr!='fullw')  && ($cassandra_pg_sidbr!='fulls') ): ?>
+				      	<?php if( ($cassandra_lite_pg_sidbr!='left') && ($cassandra_lite_pg_sidbr!='fullw')  && ($cassandra_lite_pg_sidbr!='fulls') ): ?>
 					      <div class="side_bar_wrapper">
 					        <div class="side_bar"> 
 								<?php get_sidebar(); ?>

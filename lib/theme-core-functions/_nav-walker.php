@@ -1,12 +1,12 @@
 <?php
  
-if ( ! class_exists( 'Cassandra_lite_Walker' ) ) {
+if ( ! class_exists( 'cassandra_lite_lite_Walker' ) ) {
 	/**
-	 * Cassandra_lite_Walker class.
+	 * cassandra_lite_lite_Walker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class Cassandra_lite_Walker extends Walker_Nav_Menu {
+	class cassandra_lite_lite_Walker extends Walker_Nav_Menu {
 		/**
 		 * Start Level.
 		 *

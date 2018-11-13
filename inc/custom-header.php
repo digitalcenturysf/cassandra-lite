@@ -13,26 +13,26 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses cassandra_header_style()
+ * @uses cassandra_lite_header_style()
  */
-function cassandra_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'cassandra_custom_header_args', array(
+function cassandra_lite_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'cassandra_lite_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'cassandra_header_style',
+		'wp-head-callback'       => 'cassandra_lite_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'cassandra_custom_header_setup' );
-if ( ! function_exists( 'cassandra_header_style' ) ) :
+add_action( 'after_setup_theme', 'cassandra_lite_custom_header_setup' );
+if ( ! function_exists( 'cassandra_lite_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see cassandra_custom_header_setup().
+ * @see cassandra_lite_custom_header_setup().
  */
-function cassandra_header_style() {
+function cassandra_lite_header_style() {
 	$header_text_color = get_header_textcolor();
 	/*
 	 * If no custom options for text are set, let's bail.

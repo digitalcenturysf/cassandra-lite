@@ -370,9 +370,9 @@ ul {
 ---------------------------------------*/
 .copyright_area {
 	background: #f5f5f5;
-	padding: 40px;
+	padding: 30px;
 	text-align: center;
-	font-size: 13px;
+	font-size: 14px;
 }
 .copyright_area span {
 	color: #e53235;
@@ -1272,4 +1272,23 @@ span.subwgtl {
 }
 .mb-80 {
     margin-bottom: 80px;
+}
+.logo-area {
+    padding: 20px 0;
+}
+a.navbar-brand {
+    font-size: 35px;
+    font-weight: 700;
+    color: #000 !important;
+    padding: 0;
+} 
+.copyright_area p{
+	margin-bottom: 0;
+}
+.navbar-nav {
+    margin: 7.5px -15px !important;
+}
+.navbar { 
+    margin-bottom: 0; 
+    border-width: 0;
 }

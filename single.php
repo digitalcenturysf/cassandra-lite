@@ -29,7 +29,7 @@ get_header(); ?>
 			              <h3><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></h3>
 			            </div>
 			            <div class="blog_title_rht"> 
-			              <h5><?php echo get_post_meta(get_the_ID(),'_cassandra_subtitle',true); ?></h5>
+			              <h5><?php echo get_post_meta(get_the_ID(),'_cassandra_lite_subtitle',true); ?></h5>
 			              <h3><?php the_title(); ?></h3>
 			              <h6 class="text-uppercase">
 			              	<i class="fa fa-user-md"></i> <span><?php esc_html_e('By','cassandra-lite'); ?> <?php the_author(); ?></span> 
@@ -66,8 +66,8 @@ get_header(); ?>
 					        } ?>
 			          </div> 
 			          	<?php 
-						$cassandra_lite_author = get_the_author_meta('description');
-						if($cassandra_lite_author!=''): ?>
+						$cassandra_lite_lite_author = get_the_author_meta('description');
+						if($cassandra_lite_lite_author!=''): ?>
 						  <div class="blog_author_area clearfix">
 						    <figure><?php echo get_avatar( get_the_author_meta( 'ID' ), 170 ); ?> </figure>
 						    <div class="author_details">

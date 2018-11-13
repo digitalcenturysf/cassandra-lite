@@ -19,7 +19,7 @@ get_header(); ?>
 						get_search_form();
 						the_widget( 'WP_Widget_Recent_Posts' );
 						// Only show the widget if site has multiple categories.
-						if ( cassandra_categorized_blog() ) :
+						if ( cassandra_lite_categorized_blog() ) :
 					?>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories','cassandra-lite' ); ?></h2>
