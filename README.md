@@ -99,38 +99,38 @@ GNU General Public License for more details.
 The **Cassandra Lite WordPress theme** is 100% GPLv2. See headers of files for further details.[GNU GPL v2.0 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 
  
-## HTML5 Shiv License
+### HTML5 Shiv License
 HTML5 Shiv, Copyright Alexander Farkas
 HTML5 Shiv is available under the the GPL2 and MIT licenses
 Source: https://github.com/aFarkas/html5shiv
  
 
-## Respond JS License
+### Respond JS License
 Respond JS, Copyright 2013 Scott Jehl
 Respond JS is available under the the MIT licenses
 Source: https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
  
 
-## Font Awesome License
+### Font Awesome License
 Font Awesome icons, Copyright Dave Gandy
 License: SIL Open Font License
 Source: http://fontawesome.io/
 
  
-## Bootstrap License
+### Bootstrap License
 Bootstrap, Copyright 2011-2016 Twitter
 Bootstrap is released under the MIT license
 Source: http://getbootstrap.com
 
 
-## Google Fonts License
+### Google Fonts License
 http://fonts.googleapis.com/css?family=Arimo
 http://fonts.googleapis.com/css?family=Montserrat
 http://fonts.googleapis.com/css?family=Open+Sans
 They are under SIL Open Font.
 
 
-## Theme screenshot images
+### Screenshot images
 CC0-licensed (GPL-compatible) images from https://www.pexels.com/photo/256737/
  
 
