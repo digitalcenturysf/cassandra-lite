@@ -11,7 +11,7 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.text-logo' ).text( to );
+			$( '.logo-area' ).html( '<a class="navbar-brand text-logo" href="#">'+ to +'</a>' );
 		} );
 	} );
  

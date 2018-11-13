@@ -3,12 +3,12 @@ Theme Name: Cassandra Lite
 Theme URI: http://digitalcenturysf.com/themes/cassandra/wordpress/
 Author: DigitalcenturySF
 Author URI: http://digitalcenturysf.com/
-Description: Description
+Description: Cassandra is a responsive WordPress Theme. This theme is easily customizable and comes with many great features. View more themes from this author: https://digitalcenturysf.com/
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: cassandra-lite
-Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header,  full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Tags: blog, news, two-columns, three-columns, left-sidebar, right-sidebar,  custom-header, custom-menu, editor-style, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 WP Framework is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
@@ -33,6 +33,9 @@ p {
 	font-family: "Arimo", sans-serif;
 	font-size: 15px;
 	color: #444
+}
+a{
+	color: #000;
 }
 .mwd100{
 	max-width: 100%;
@@ -117,8 +120,7 @@ ul {
 	color: #222;
 	font-size: 30px;
 	font-weight: 800;
-	position: relative;
-	text-transform: uppercase;
+	position: relative; 
 	font-family: 'Playfair Display', serif;
 }
 .site-section-area h6 {
@@ -148,10 +150,12 @@ ul {
 1.2 header area start here 
 ---------------------------------------*/ 
 .header-top-inner {
-	background: #09090B url(assets/images/bg2.jpg) center center no-repeat;
-	height: 188px;
-	text-align: center;
-	padding: 60px 0; 
+	background: #09090B url(assets/images/banner.jpg) no-repeat;
+	height: 350px;
+    text-align: center;
+    padding: 150px 0;
+    background-position: center -170px;
+    background-size: cover; 
 }
 .header-top-inner h6 {
 	color: #e53235;
@@ -160,7 +164,7 @@ ul {
 	margin-bottom: 5px;
 }
 .header-top-inner h2 {
-	color: #fff;
+	color: #000;
 	font-size: 30px;
 	text-transform: uppercase;
 	font-family: 'Playfair Display';
@@ -183,7 +187,7 @@ ul {
 	padding: 80px 0px
 }
 .newsBlg-area .blog-section1 {
-	width: 370px;
+	max-width: 410px;
 	display: inline-block;
 	margin-right: 30px;
 	float: left
@@ -262,14 +266,14 @@ ul {
 	color: #fff;
 }
 .newsBlg-area .blog-section2 h3 {
-	font-size: 15px;
-	text-transform: uppercase;
-	margin: 30px 30px 10px 30px;
-	line-height: 24px;
+	font-size: 18px; 
+	margin: 30px 30px 15px 30px;
+	line-height: 24px; 
 }
 .newsBlg-area .blog-section2 h5 {
 	font-size: 14px;
 	font-family: "Arimo", sans-serif;
+	line-height: 26px;
 }
 .newsBlg-area .blog-section2 h6 {
 	font-family: "Arimo", sans-serif;
@@ -1291,4 +1295,41 @@ a.navbar-brand {
 .navbar { 
     margin-bottom: 0; 
     border-width: 0;
+}
+.blg-fig-bx span:nth-child(1) a {
+    color: #d00009;
+}
+.blg-fig-bx span:nth-child(2) a {
+    color: #fff;
+}
+.mt-13{
+	margin-top: 13px;
+}
+.fr0 {
+    width: 100%;
+    float: left;
+    height: auto;
+    padding: 70px 0 70px;
+}
+.single-sidebar #menu-testing-menu ul.sub-menu {
+    margin-left: 18px;
+}
+.fr0 .error-content h1 {
+    font-size: 210px;
+    color: #333;
+    font-weight: 700;
+}
+.fr0 .error-content p {
+    margin: 0 0 30px;
+}
+.fr0 .btn.btn-primary {
+    background: #42c0d9;
+    border-color: #42c0d9;
+}
+.fr0 .btn.btn-primary:hover {
+    background: transparent; 
+    color: #42c0d9;
+}
+.error404 .site-content{
+	margin-top: 0;
 }

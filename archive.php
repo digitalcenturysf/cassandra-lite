@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package cassandra
+ * @package Cassandra
  */ 
 get_header(); ?>
 	<div id="primary" class="content-area">

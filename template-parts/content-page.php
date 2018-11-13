@@ -4,22 +4,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package cassandra
- */
-if(is_page()){ 
-	if(get_post_meta(get_the_ID(),'_cassandra_lite_page_title',true) !=null){
-		$cassandra_lite_pg_title = get_post_meta(get_the_ID(),'_cassandra_lite_page_title',true);
-	}else{
-		$cassandra_lite_pg_title = 'yes';
-	}
-} 
+ * @package Cassandra
+ */ 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if($cassandra_lite_pg_title =='yes'): ?>
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header --> 
 	<div class="entry-content">
 		<?php
 			the_content();

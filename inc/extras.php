@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package cassandra
+ * @package Cassandra
  */
 /**
  * Adds custom classes to the array of body classes.

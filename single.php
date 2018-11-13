@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package cassandra
+ * @package Cassandra
  */
    
 get_header(); ?>
@@ -12,7 +12,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		<?php
 			if ( have_posts() ) : 
-				/* Start the Loop */
+			/* Start the Loop */
 			while ( have_posts() ) : the_post(); ?> 
 			<!-- contact_map_area start here -->
 			<div class="blog_page_area">
@@ -23,23 +23,23 @@ get_header(); ?>
 			        	<?php if(has_post_thumbnail()): ?>
 					        <figure><?php the_post_thumbnail('cassandra-blog-single'); ?></figure>
 					    <?php endif; ?> 
-			          <div class="blog_title clr">
-			            <div class="blog_title_lft">
-			              <p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cal-icon.png" alt="calender"></p>
-			              <h3><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></h3>
-			            </div>
-			            <div class="blog_title_rht"> 
-			              <h5><?php echo get_post_meta(get_the_ID(),'_cassandra_lite_subtitle',true); ?></h5>
-			              <h3><?php the_title(); ?></h3>
-			              <h6 class="text-uppercase">
-			              	<i class="fa fa-user-md"></i> <span><?php esc_html_e('By','cassandra-lite'); ?> <?php the_author(); ?></span> 
-			              	<?php if(has_tag()) { ?>
-			              		<i class="fa fa-tag "></i> <?php the_tags( '', ', ', '<br />' ); ?>
-							<?php } ?>
-			              </h6>
-			            </div>
-			          </div>  
-			          <div class="blog_para mb-80">
+						<div class="blog_title clr">
+							<div class="blog_title_lft">
+								<p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/cal-icon.png" alt="calender"></p>
+								<h3><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></h3>
+							</div>
+							<div class="blog_title_rht"> 
+								<h5><?php echo get_post_meta(get_the_ID(),'_cassandra_lite_subtitle',true); ?></h5>
+								<h3><?php the_title(); ?></h3>
+								<h6 class="text-uppercase">
+									<i class="fa fa-user-md"></i> <span><?php esc_html_e('By','cassandra-lite'); ?> <?php the_author(); ?></span> 
+									<?php if(has_tag()) { ?>
+									<i class="fa fa-tag "></i> <?php the_tags( '', ', ', '<br />' ); ?>
+									<?php } ?>
+								</h6>
+							</div>
+						</div>  
+			            <div class="blog_para mb-80">
 			            <?php the_content();
 					        wp_link_pages( array(
 					            'before' => '<div class="page-links">' . esc_html__( 'Pages:','cassandra-lite' ),
@@ -64,7 +64,7 @@ get_header(); ?>
 					                ) );
 					              }
 					        } ?>
-			          </div> 
+			            </div> 
 			          	<?php 
 						$cassandra_lite_lite_author = get_the_author_meta('description');
 						if($cassandra_lite_lite_author!=''): ?>

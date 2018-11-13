@@ -7,7 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package cassandra
+ * @package Cassandra
  */
 /*
  * If the current post is protected by a password and

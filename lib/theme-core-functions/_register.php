@@ -30,7 +30,7 @@ add_action( 'widgets_init', 'cassandra_lite_widgets_init' );
  *	Register Fonts
  */
 function cassandra_lite_fonts_url() {
-    $media_font = '';
+    $cassandra_lite_font = '';
 	$open_sans = _x( 'on', 'Open Sans font: on or off','cassandra-lite' );
 	$Montserrat = _x( 'on', 'Montserrat font: on or off','cassandra-lite' );
 	$Arimo = _x( 'on', 'Arimo font: on or off','cassandra-lite' );
@@ -53,7 +53,7 @@ function cassandra_lite_fonts_url() {
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' )
 		);
-		$media_font = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		$cassandra_lite_font = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
-    return esc_url_raw( $media_font );
+    return esc_url_raw( $cassandra_lite_font );
 }

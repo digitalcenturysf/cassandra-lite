@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package cassandra
+ * @package Cassandra
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -34,18 +34,13 @@ wp_head(); ?>
 		    </div>
 	      </div> 
 	      <div class="col-lg-9 col-md-9 col-sm-10">
-	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	          <?php media_main_menu(); ?>
+	      	<?php $logo = get_custom_logo(); ?>
+	        <div class="collapse navbar-collapse <?php echo ($logo) ? 'mt-13': ''; ?>" id="bs-example-navbar-collapse-1">
+	          <?php cassandra_lite_main_menu(); ?>
 	        </div>
 	      </div>   
 	    </div> 
 	  </nav>
 	</header>
-	<?php 
-		if(is_page()){
-			get_template_part('header/banner-full');
-		}else{
-			get_template_part('header/banner');
-		}
-	?>
+	<?php get_template_part('header/banner'); ?>
 	<div id="content" class="site-content">

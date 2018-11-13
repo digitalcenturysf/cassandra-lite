@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package cassandra
+ * @package Cassandra
  */
 if ( ! function_exists( 'cassandra_lite_posted_on' ) ) :
 /**

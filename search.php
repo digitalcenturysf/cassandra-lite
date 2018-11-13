@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package cassandra
+ * @package Cassandra
  */
  
 get_header(); ?>

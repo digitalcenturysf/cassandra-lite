@@ -8,7 +8,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package cassandra
+ * @package Cassandra
  */
 /**
  * Set up the WordPress core custom header feature.

@@ -8,26 +8,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**===============================================================================
  * Enqueue Theme Assets (Scripts & Styles)
  =================================================================================*/
-if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_enqueue-assets.php')) {
-    require cassandra_lite_DIR . '/lib/theme-core-functions/_enqueue-assets.php';
+if ( file_exists( CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_enqueue-assets.php')) {
+    require CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_enqueue-assets.php';
 }
 /**===============================================================================
  * Register Functions
  =================================================================================*/
-if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_register.php')) { 
-    require cassandra_lite_DIR . '/lib/theme-core-functions/_register.php';
+if ( file_exists( CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_register.php')) { 
+    require CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_register.php';
 }
 /**===============================================================================
  * Helpers Functions
  =================================================================================*/
-if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_helpers.php')) { 
-    require cassandra_lite_DIR . '/lib/theme-core-functions/_helpers.php';
+if ( file_exists( CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_helpers.php')) { 
+    require CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_helpers.php';
 }
 /**===============================================================================
  * Helpers Functions
  =================================================================================*/
-if ( file_exists( cassandra_lite_DIR . '/lib/theme-core-functions/_nav-walker.php')) { 
-    require cassandra_lite_DIR . '/lib/theme-core-functions/_nav-walker.php';
+if ( file_exists( CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_nav-walker.php')) { 
+    require CASSANDRA_LITE_DIR . '/lib/theme-core-functions/_nav-walker.php';
 }
 /**===============================================================================
  * Sets up theme defaults and registers support for various WordPress features.
@@ -47,9 +47,7 @@ function cassandra_lite_setup() {
 	load_theme_textdomain( 'cassandra-lite', get_template_directory() . '/languages' );
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-	
-	// Enable shortcodes in text widgets
-	add_filter('widget_text','do_shortcode');
+	 
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -124,7 +122,5 @@ if (!function_exists('cassandra_lite_remove_wp_open_sans')) :
         wp_deregister_style( 'open-sans' );
         wp_register_style( 'open-sans', false );
     }
-    add_action('wp_enqueue_scripts', 'cassandra_lite_remove_wp_open_sans');
-    // Uncomment below line to remove from the admin
-    // add_action('admin_enqueue_scripts', 'cassandra_lite_remove_wp_open_sans');
+    add_action('wp_enqueue_scripts', 'cassandra_lite_remove_wp_open_sans'); 
 endif;

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package cassandra
+ * @package Cassandra
  */
 /**
  * Jetpack setup function.

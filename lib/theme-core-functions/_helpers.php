@@ -64,11 +64,9 @@ function cassandra_lite_comments_list($comment, $args, $depth) {
 	  </div>
 <?php } 
 
-
 /**=====================================================================
  * Comment box title change
-=====================================================================*/
- 
+=====================================================================*/ 
 add_filter( 'comment_form_defaults', 'cassandra_lite_comment_form_allowed_tags' );
 function cassandra_lite_comment_form_allowed_tags( $defaults ) {
 
@@ -79,17 +77,14 @@ function cassandra_lite_comment_form_allowed_tags( $defaults ) {
     $defaults['comment_field'] = '';
 	$defaults['label_submit'] =  esc_html__( 'Comment Now','cassandra-lite' );
 	return $defaults;
-
 }
 
 
 /**=====================================================================
  * Comment form field order
 =====================================================================*/
- 
 add_action( 'comment_form_after_fields', 'cassandra_lite_add_textarea' );
 add_action( 'comment_form_logged_in_after', 'cassandra_lite_add_textarea' );
-
 function cassandra_lite_add_textarea()
 {
     echo '<li class="msg"><textarea id="comment" name="comment" cols="45" rows="6" placeholder="Your Comment" maxlength="65525"  required="required"></textarea></li>';
@@ -122,15 +117,15 @@ add_filter('comment_form_default_fields','cassandra_lite_remove_comment_fields')
  *  nav menus
 =====================================================================*/
  // main menu
-function media_main_menu(){
+function cassandra_lite_main_menu(){
 	wp_nav_menu( array(
 		'theme_location'    => 'mainmenu',
 		'depth'             => 3,
 		'container'         => false,
-		'menu_id'        	=> 'media_menu',
+		'menu_id'        	=> 'cassandra_lite_menu',
 		'menu_class'        => 'nav navbar-nav',
 		'walker'       		=> new cassandra_lite_lite_Walker(),
-		'fallback_cb'       => 'media_default_menu'
+		'fallback_cb'       => 'cassandra_lite_default_menu'
 	));
 }
  
@@ -139,8 +134,7 @@ function media_main_menu(){
 =====================================================================*/
  
 if(is_user_logged_in()):
-	function media_default_menu() {
-		?>
+	function cassandra_lite_default_menu() {?>
 		<ul class="nav navbar-nav"> 
 			<li>
 		        <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>"><?php esc_html_e( 'Add Menu','cassandra-lite' ); ?></a> 
@@ -212,6 +206,7 @@ function cassandra_lite_breadcrumb(){
 		}
 	}elseif(is_404()){ esc_html_e('404 Error','cassandra-lite');}else{ the_title();}
 }
+
 /**=====================================================================
  * BreadCrumb sub (Top) Title 1
 =====================================================================*/
@@ -273,42 +268,7 @@ function cassandra_lite_breadcrumb_1(){
 		}
 	}elseif(is_404()){ esc_html_e('404 Error','cassandra-lite');}else{ the_title();}
 }
-  
-// woocommerce min cart
-function cassandra_lite_woocommere_min_cart(){
-	global $woocommerce;
-?>
-    <div class="cart-area"><a href="<?php if ( class_exists( 'WooCommerce' ) ) { echo wc_get_cart_url(); }else{ echo '#'; } ?>">
-      <h3><span><?php if ( class_exists( 'WooCommerce' ) ) { echo $woocommerce->cart->cart_contents_count; }else{ echo '0'; } ?></span></h3>
-      <div>
-        <h4><?php esc_html_e('My Cart','cassandra-lite'); ?></h4>
-        <h5><?php if ( class_exists( 'WooCommerce' ) ) { echo $woocommerce->cart->get_cart_total(); }else{ echo '0.00'; } ?></h5>
-      </div>
-      </a>
-    </div>  
-	<?php
-
-}
- 
-// product item count with ajax
-add_filter( 'woocommerce_add_to_cart_fragments', 'cassandra_lite_woocommerce_header_add_to_cart_fragment' );
-function cassandra_lite_woocommerce_header_add_to_cart_fragment( $fragments ) {
-		global $woocommerce;
-	ob_start();
-	?>
-     <div class="cart-area"><a href="<?php if ( class_exists( 'WooCommerce' ) ) { echo wc_get_cart_url(); }else{ echo '#'; } ?>">
-      <h3><span><?php if ( class_exists( 'WooCommerce' ) ) { echo $woocommerce->cart->cart_contents_count; }else{ echo '0'; } ?></span></h3>
-      <div>
-        <h4><?php esc_html_e('My Cart','cassandra-lite'); ?></h4>
-        <h5><?php if ( class_exists( 'WooCommerce' ) ) { echo $woocommerce->cart->get_cart_total(); }else{ echo '0.00'; } ?></h5>
-      </div>
-      </a>
-    </div>  
-	
-	<?php
-	$fragments['div.cart-area'] = ob_get_clean();
-	return $fragments;
-}
+   
 // remove vc shortcode
 function cassandra_lite_short_text_remove_shortcode($start=0,$end=50,$dot=''){
 	global $post;
@@ -323,40 +283,13 @@ function cassandra_lite_short_text_remove_shortcode($start=0,$end=50,$dot=''){
 	$desc = substr($desc,0,strrpos($desc,' ')).$dot;
 	echo $desc;
 }
-
-/**=====================================================================
- * Cassandra Slider Category Query
-=====================================================================*/
  
-function cassandra_lite_slider_terms(){
-	$cassandra_lite_all_terms = array();
-	$cassandra_lite_term_name = array();
-	$cassandra_lite_term_slug = array();
-	$cassandra_lite_terms = get_terms( 'slider_cat' );
-	if ( ! empty( $cassandra_lite_terms ) && ! is_wp_error( $cassandra_lite_terms ) ){
-	    foreach ( $cassandra_lite_terms as $cassandra_lite_term ) {
-	        $cassandra_lite_term_name[] =  $cassandra_lite_term->name;
-	        $cassandra_lite_term_slug[] =  $cassandra_lite_term->slug;
-	    }
-	}
-	$cassandra_lite_all_terms =  array_combine($cassandra_lite_term_slug,$cassandra_lite_term_name);
-	if(empty($cassandra_lite_all_terms)){
-		return $cassandra_lite_all_terms = array( 'none' => 'None.');
-	}else{
-		return $cassandra_lite_all_terms;
-	}
-}
-
 // main header logo area
-function cassandra_lite_headerLogo(){
-    global $viktor_lite;
-	$logo = get_theme_mod( 'custom_logo' );
-	$image = wp_get_attachment_image_src( $logo , 'full' ); 
-	//$logo = get_theme_mod( 'v_logo_img' );
+function cassandra_lite_headerLogo(){ 
+	$logo = get_custom_logo(); 
 	if( !empty($logo) ){
-	?>
-	    <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo esc_url($image[0]); ?>" alt="<?php esc_attr_e('site logo','cassandra-lite'); ?>"></a>
-	<?php }else{ ?>
+		the_custom_logo(); 
+		}else{ ?>
 	<a class="navbar-brand text-logo" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a>
 	<?php }
 } 

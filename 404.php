@@ -4,46 +4,28 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package cassandra
+ * @package Cassandra
  */
-get_header(); ?>
+get_header(); ?>	
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.','cassandra-lite' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?','cassandra-lite' ); ?></p>
-					<?php
-						get_search_form();
-						the_widget( 'WP_Widget_Recent_Posts' );
-						// Only show the widget if site has multiple categories.
-						if ( cassandra_lite_categorized_blog() ) :
-					?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories','cassandra-lite' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php
-						endif;
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s','cassandra-lite' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+		<main id="main" class="site-main">
+
+			<section class="main-content fr0">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="error-content text-center">
+								<h1><?php esc_html_e('404','cassandra-lite'); ?></h1>
+								<p><?php  
+								 esc_html_e("Unfortunately the page you were looking for could not be found.","cassandra-lite"); 
+								?></p>
+								<a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-primary"><?php esc_html_e("Back To Home","cassandra-lite"); ?></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php

@@ -1,23 +1,129 @@
-=== Cassandra ===
+# Cassandra Lite v1.0.0
+![Cassandra Lite - Free Wordpress Theme](/screenshot.png)
+
+> Cassandra is a responsive WordPress Theme. This theme is easily customizable and comes with many great features.
+
+View more themes from this author: https://digitalcenturysf.com
+
+## Demo and Documentation
+* **Demo** : https://digitalcenturysf.com/demo/?theme=cassandra-wp 
+* **Support Forum** : https://wordpress.org/support/theme/cassandra-lite
+
+
+## Installation 
+
+1. Via The WordPress Dashboard (Easier):   
+	a) Login to your wp-admin account and go to Appearance -> Themes.   
+
+	![](/assets/images/i1.png)  
+
+	b) Select "Add New" button and then click on the "Upload Theme" button.    
+
+	![](/assets/images/i2.png)   
+
+	![](/assets/images/i3.png)  
+	  
+	c) Click on the Browse button and find the cassandra-lite.zip file  and then click on the "Install" button.    
+
+	![](/assets/images/i4.png)  
+	
+	d) After the theme has successfully uploaded click Activate and you're done!         
+
+	![](/assets/images/i5.png)  
+	
+
  
-Requires at least: 4.0
-Tested up to: 4.7
-Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-A starter theme called WP Framework, or underscores.
-== Description ==
-Cassandra is a modern WordPress based woocommerce theme designed for the perfect ecommerce store. This theme's files and elements are easily customizable for any organization. This theme is designed using high quality images and latest HTML5 , CSS3 standards , Visua Composer etc.
-== Installation ==
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-== Frequently Asked Questions ==
-= Does this theme support any plugins? =
-WP Framework includes support for Infinite Scroll in Jetpack.
-== Changelog ==
-= 1.0 - May 12 2015 =
-* Initial release
-== Credits ==
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+2. Via FTP:  
+	* Unzip the package you downloaded, inside you will find a file called cassandra-lite.zip   
+	* Login to your web server via FTP and browse to wp-content/themes and upload the Cassandra-lite folder here    
+	* Login to your WordPress dashboard and go to Appearance > Themes, the Cassandra theme will be visible, click Activate and you're done!    
+  
+3. Theme Customizer	Options:  
+
+	* Basic Settings:  
+        You can manage here site logo, favicon, banner image, color and text.	  
+
+	* Home Page Settings:     
+		* Go to Page --> Add New   
+		* Page Attributes --> Select "Home Page".   
+		* Our path to Perfection : You can set home page title, images, description and background image.    
+        * Blog Section : you can select category of posts and add title, description of posts slider.  
+		* For set home page : Go to Settings	-->	Front page displays	--> Checed  "A static page (select below)" --> Front page --> select your Page.  
+                 
+4. How to setup custom menu ?  
+
+	You can change the content of the top right menu by create your own.  
+
+	Create your custom menu :  
+
+	* In your admin panel, go to Appearance > Menu.  
+
+	* Add content (pages, ...) to the menu and save.  
+
+	Attach the custom menu to the theme :  
+
+	* In your admin panel, go to Appearance > Menu.  
+	* Create a Menu and set checked "Main Menu" to display header menu.  
+ 	
+
+## Copyright
+
+Cassandra Lite WordPress Theme, Copyright (C) 2018, DigitalCenturySF
+Cassandra Lite is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+
+
+## Theme License
+The **Cassandra Lite WordPress theme** is 100% GPLv2. See headers of files for further details.[GNU GPL v2.0 or later](http://www.gnu.org/licenses/gpl-2.0.html)
+
+ 
+## HTML5 Shiv License
+HTML5 Shiv, Copyright Alexander Farkas
+HTML5 Shiv is available under the the GPL2 and MIT licenses
+Source: https://github.com/aFarkas/html5shiv
+ 
+
+## Respond JS License
+Respond JS, Copyright 2013 Scott Jehl
+Respond JS is available under the the MIT licenses
+Source: https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+ 
+
+## Font Awesome License
+Font Awesome icons, Copyright Dave Gandy
+License: SIL Open Font License
+Source: http://fontawesome.io/
+
+ 
+## Bootstrap License
+Bootstrap, Copyright 2011-2016 Twitter
+Bootstrap is released under the MIT license
+Source: http://getbootstrap.com
+
+
+## Google Fonts License
+http://fonts.googleapis.com/css?family=Arimo
+http://fonts.googleapis.com/css?family=Montserrat
+http://fonts.googleapis.com/css?family=Open+Sans
+They are under SIL Open Font.
+
+
+## Theme screenshot images
+CC0-licensed (GPL-compatible) images from https://www.pexels.com/photo/256737/
+ 
+
+## Changelog
+ 
+### 1.0.0
+* Theme released 
+

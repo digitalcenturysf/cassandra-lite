@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package cassandra
+ * @package Cassandra
  */
  
 ?>
@@ -20,7 +20,7 @@
 				$i=1;
 				foreach ( $cassandra_lite_terms as $cassandra_lite_term ) {
 					if($i>2) break;
-					echo '<span><a href="' . get_term_link( $cassandra_lite_term ) . '">' . $cassandra_lite_term->name . '</a></span> '; 
+					echo '<span><a href="' . esc_url(get_term_link( $cassandra_lite_term )) . '">' . esc_html($cassandra_lite_term->name) . '</a></span> '; 
 					$i++;
 				} 
 			} 

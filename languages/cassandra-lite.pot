@@ -1,0 +1,295 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cassandra Lite v1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-11-13 19:07:37+0000\n"
+"Last-Translator: test <test@test.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:18
+#@ cassandra-lite
+msgid "404"
+msgstr ""
+
+#: 404.php:20
+#@ cassandra-lite
+msgid "Unfortunately the page you were looking for could not be found."
+msgstr ""
+
+#: 404.php:22
+#@ cassandra-lite
+msgid "Back To Home"
+msgstr ""
+
+#: comments.php:28
+#, php-format
+#@ cassandra-lite
+msgctxt "comments title"
+msgid "Comments ( 01 )"
+msgid_plural "Comments ( %1$s )"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35
+#: comments.php:49
+#@ cassandra-lite
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:36
+#: comments.php:50
+#@ cassandra-lite
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:58
+#@ cassandra-lite
+msgid "Comments are closed."
+msgstr ""
+
+#: header.php:22
+#@ cassandra-lite
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:29
+#@ cassandra-lite
+msgid "Toggle navigation"
+msgstr ""
+
+#: inc/customizer.php:18
+#@ cassandra-lite
+msgid "Footer Settings"
+msgstr ""
+
+#: inc/customizer.php:27
+#@ cassandra-lite
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/template-tags.php:25
+#: lib/theme-core-functions/_helpers.php:41
+#: lib/theme-core-functions/_helpers.php:172
+#: lib/theme-core-functions/_helpers.php:187
+#: lib/theme-core-functions/_helpers.php:234
+#: lib/theme-core-functions/_helpers.php:249
+#, php-format
+#@ cassandra-lite
+msgid "%s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:36
+#: inc/template-tags.php:41
+#@ cassandra-lite
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:38
+#, php-format
+#@ cassandra-lite
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-tags.php:43
+#, php-format
+#@ cassandra-lite
+msgid "Tagged %1$s"
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:49
+#, php-format
+#@ cassandra-lite
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post
+#. translators: %s: Name of current post 
+#: inc/template-tags.php:55
+#: template-parts/content-page.php:29
+#, php-format
+#@ cassandra-lite
+msgid "Edit %s"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:58
+#, php-format
+#@ cassandra-lite
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:60
+#@ cassandra-lite
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:73
+#@ cassandra-lite
+msgid "<span>Get In</span> Touch  with Us"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:78
+#@ cassandra-lite
+msgid "Comment Now"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:140
+#@ cassandra-lite
+msgid "Add Menu"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:156
+#@ cassandra-lite
+msgid "Blog"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:207
+#: lib/theme-core-functions/_helpers.php:269
+#@ cassandra-lite
+msgid "404 Error"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:218
+#@ cassandra-lite
+msgid "New Collection"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:306
+#@ cassandra-lite
+msgid "Cassandra - Copyrights"
+msgstr ""
+
+#: lib/theme-core-functions/_helpers.php:306
+#@ cassandra-lite
+msgid "DigitalCenturySF."
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:9
+#@ cassandra-lite
+msgid "Sidebar"
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:11
+#: lib/theme-core-functions/_register.php:20
+#@ cassandra-lite
+msgid "Add widgets here."
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:18
+#@ cassandra-lite
+msgid "Footer Widget"
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:34
+#@ cassandra-lite
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:35
+#@ cassandra-lite
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:36
+#@ cassandra-lite
+msgctxt "Arimo font: on or off"
+msgid "on"
+msgstr ""
+
+#: lib/theme-core-functions/_register.php:37
+#@ cassandra-lite
+msgctxt "Playfair Display font: on or off"
+msgid "on"
+msgstr ""
+
+#: lib/theme-core-functions/theme-core-functions.php:67
+#@ cassandra-lite
+msgid "Main Menu"
+msgstr ""
+
+#: single.php:35
+#@ cassandra-lite
+msgid "By"
+msgstr ""
+
+#: single.php:45
+#: template-parts/content-page.php:18
+#@ cassandra-lite
+msgid "Pages:"
+msgstr ""
+
+#: single.php:53
+#, php-format
+#@ cassandra-lite
+msgctxt "Parent post link"
+msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
+msgstr ""
+
+#: single.php:58
+#@ cassandra-lite
+msgid "Next"
+msgstr ""
+
+#: single.php:59
+#@ cassandra-lite
+msgid "Next post:"
+msgstr ""
+
+#: single.php:61
+#@ cassandra-lite
+msgid "Previous"
+msgstr ""
+
+#: single.php:62
+#@ cassandra-lite
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-none.php:12
+#@ cassandra-lite
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:17
+#, php-format
+#@ cassandra-lite
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:19
+#@ cassandra-lite
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:23
+#@ cassandra-lite
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/content.php:35
+#@ cassandra-lite
+msgid "by"
+msgstr ""
+
+#: template-parts/content.php:35
+#@ cassandra-lite
+msgid " ago"
+msgstr ""
+
