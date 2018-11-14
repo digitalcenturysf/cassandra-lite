@@ -296,14 +296,16 @@ function cassandra_lite_headerLogo(){
 
 // copyright test options
 function cassandra_lite_copyrightText(){ 
-    $copy_text = get_theme_mod( 'v_copyright_text' );
-	if(!empty($copy_text)){
-	?>
-		<p><?php echo esc_html($copy_text); ?></p>
-	<?php
-	}else{
-	?>
-		<p><?php esc_html_e('Cassandra - Copyrights','cassandra-lite'); ?> &copy; <a href="<?php echo esc_url('http://digitalcenturysf.com/'); ?>" target="_blank"><?php esc_html_e('DigitalCenturySF.','cassandra-lite'); ?></a></p>
-	<?php
-	}
+	$copy_text = get_theme_mod( 'v_copyright_text' );
+    if(!empty($copy_text)){
+    ?>
+    <p><?php echo esc_html($copy_text); ?></p>
+    <?php
+    }else{
+      $url1 =  esc_url('https://wordpress.org/');
+      $url2 =  esc_url('https://digitalcenturysf.com/templates/cassandra-fashion1-retail-wordpress-theme/'); 
+      $text =  esc_html__('WordPress','cassandra-lite');
+      $text2 =  esc_html__('WordPress Theme','cassandra-lite');
+      printf( '<p><a href="%s">%s</a> Theme Powered by <a class="credits" href="%s">%s</a></p>', esc_url($url1), esc_html($text), esc_url($url2), esc_html($text2) );
+    }
 } 
