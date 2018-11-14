@@ -79,8 +79,8 @@ View more themes from this author: https://digitalcenturysf.com
 
 ## Copyright
 
-Cassandra Lite WordPress Theme, Copyright (C) 2018, DigitalCenturySF
-Cassandra Lite is distributed under the terms of the GNU GPL
+Cassandra Lite WordPress Theme, Copyright (C) 2018, DigitalCenturySF.
+Cassandra Lite is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
