@@ -30,7 +30,12 @@
     <?php 
     $cassandra_lite_img_chk = '';
     endif; ?>  
-	<h3 class="<?php echo esc_attr($cassandra_lite_img_chk); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+    <h3 class="<?php echo esc_attr($cassandra_lite_img_chk); ?>"> 
+		<?php if(is_sticky()): ?>
+		    <span class="dashicons dashicons-admin-post"></span>
+		<?php endif; ?>
+    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    </h3>
 	<h5><?php cassandra_lite_short_text_remove_shortcode(); ?></h5>
 	<h6><?php esc_html_e('by','cassandra-lite'); ?> <span><a href="#"><?php the_author(); ?></a></span>&nbsp; &nbsp;    /&nbsp; &nbsp;    <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . esc_html__(' ago','cassandra-lite'); ?></h6>
 </div> 

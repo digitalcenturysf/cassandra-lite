@@ -1,7 +1,7 @@
 # Cassandra Lite v1.0.0
 ![Cassandra Lite - Free Wordpress Theme](/screenshot.png)
 
-> Cassandra is a responsive WordPress Theme. This theme is easily customizable and comes with many great features.
+> Cassandra is a responsive and clean WordPress Theme. It's easily customizable and comes with many great features.
 
 View more themes from this author: https://digitalcenturysf.com
 
